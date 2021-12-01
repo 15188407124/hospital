@@ -41,7 +41,7 @@ public interface DoctorMapper {
 	 * @param mark
 	 * @return
 	 */
-	List<Map<String,Object>> doctorQueryMsg(@Param("doctorId") int doctorId, @Param("mark") int mark);
+	List<Map<String,Object>> doctorQueryMsg(@Param("doctorId") String doctorId, @Param("mark") int mark);
 	/**
 	 * 根据id查寻患者是否预约
 	 * @param patientId

@@ -45,7 +45,7 @@ public class DoctorServiceImpl implements DoctorService {
 	}
 
 	@Override
-	public List<Map<String,Object>> doctorQueryMsg(int doctorId, int mark) {
+	public List<Map<String,Object>> doctorQueryMsg(String doctorId, int mark) {
 		List<Map<String,Object>> list = doctorMapper.doctorQueryMsg(doctorId,mark);
 		return list;
 	}

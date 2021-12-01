@@ -42,7 +42,7 @@ public interface DoctorService {
 	 * @param mark
 	 * @return
 	 */
-	List<Map<String,Object>> doctorQueryMsg(int doctorId, int mark);
+	List<Map<String,Object>> doctorQueryMsg(String doctorId, int mark);
 	/**
 	 * 查寻用户是否已经预约
 	 * @param patientId

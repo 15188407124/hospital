@@ -245,8 +245,7 @@ public class DoctorController {
 
 	@RequestMapping(value = "/doctorQueryMsg.do",produces = "application/json;charset=utf-8")
 	@ResponseBody
-	public String doctorQueryMsg(@Param("doctorId") Integer doctorId,@Param("mark") Integer mark) {
-
+	public String doctorQueryMsg(@Param("doctorId") String doctorId,@Param("mark") Integer mark) {
 		List<Map<String,Object>> list = doctorService.doctorQueryMsg(doctorId,mark);
 		for(Map<String,Object> map:list){
 			String msgtime = map.get("msgtime").toString();
