@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hospital.mapper.AdministrativeMapper">
+    <select id="findAdMsg" resultType="map">
+		select p.parameter_values as "value", p.parameter_name as "name", p.message  from paracode p where p.code='001'
+		</select>
+	<resultMap id="commons" type="com.hospital.bean.Parameter">
+		<id column="code_id" property="code"/>
+		<result column="parameter_name" property="name"/>
+	</resultMap>
+	<resultMap id="findAd_Doctor" type="com.hospital.bean.Parameter" extends="commons">
+		<collection property="doctorlist" ofType="com.hospital.bean.Doctor">
+			<result column="dname" property="name"/>
+			<result column="gender" property="gender"/>
+			<result column="doctor_title" property="title"/>
+			<result column="working_time" property="workTime"/>
+		</collection>
+	</resultMap>
+	<select id="findAd_and_Doctor" resultMap="findAd_Doctor">
+		select p.parameter_name as "name",d.working_time,d.gender,d.doctor_title,d.name as "dname"  from paracode p,doctor d where p.parameter_values=d.doctor_department and p.code='001'
+	</select>
+</mapper>

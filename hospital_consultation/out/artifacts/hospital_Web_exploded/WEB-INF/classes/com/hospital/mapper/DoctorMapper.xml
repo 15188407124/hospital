@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hospital.mapper.DoctorMapper">
+	<select id="checkIsOrder" parameterType="com.hospital.bean.Order" resultType="com.hospital.bean.Order">
+		SELECT * FROM `order` WHERE patientId=#{patientId} AND order_up=#{order_up} AND order_down=#{order_down} AND order_date=#{order_date}
+	</select>
+	<select id="findOrderNum" parameterType="com.hospital.bean.Order" resultType="Integer">
+		SELECT count(*) FROM `order` o WHERE o.doctorId=#{doctorId} AND o.order_up=#{order_up} and o.order_down=#{order_down} AND o.order_date=#{order_date} AND order_state=0
+	</select>
+	<delete id="delOrderDoctor">
+		DELETE FROM `order` WHERE doctorId=#{doctorId} and patientId=#{patientId} and order_state=0
+	</delete>
+	<insert id="msgSave">
+		INSERT INTO message(doctorId,patientId,mark,msg,msgtime)VALUES(#{doctorId},#{patientId},#{mark},#{msg},NOW())
+	</insert>
+	<select id="doctorQueryMsg" resultType="map">
+		SELECT m.*,p.patientName FROM message m,patient p WHERE m.doctorId=#{doctorId} AND m.mark=#{mark} AND p.certificateNo=m.patientId
+	</select>
+	<select id="orderDoctorQuery" resultType="com.hospital.bean.Order">
+		select * from `order` where doctorId=#{doctorId} and patientId=#{patientId} and order_state=0
+	</select>
+    <insert id="addOrderMsg" parameterType="com.hospital.bean.Order">
+      INSERT INTO `order`(doctorId,patientId,order_date,order_up,order_time)VALUES(#{doctorId},#{patientId},#{order_date},1,NOW())
+    </insert>
+	<insert id="addOrderMsgs" parameterType="com.hospital.bean.Order">
+      INSERT INTO `order`(doctorId,patientId,order_date,order_down,order_time)VALUES(#{doctorId},#{patientId},#{order_date},1,NOW())
+    </insert>
+	<insert id="doctorSave" parameterType="com.hospital.bean.Doctor" useGeneratedKeys="true" keyProperty="id">
+		insert into
+		doctor(gender,doctor_department,name,doctor_title,working_time)
+		values
+		(#{gender},#{department},#{name},#{title},#{workTime})
+	</insert>
+	<select id="doctorQuery" parameterType="com.hospital.bean.DoctorCode"
+		resultType="com.hospital.bean.Doctor">
+		SELECT doctorId as "id",
+		gender as "gender",
+		doctor_department as "department",
+		`name` as "name",
+		doctor_title AS "title",
+		working_time AS "workTime",
+		state as "state"
+		FROM doctor
+		where
+		1=1
+		and
+		if(#{id} is null,0=0,doctorId=#{id})
+		and
+		if(#{name} is null,0=0,name
+		like CONCAT('%',#{name},'%'))
+		and
+		if(#{title} is
+		null,0=0,doctor_title=#{title})
+		and
+		if(#{department} is
+		null,0=0,doctor_department=#{department})
+		and
+		if(#{startTime} is
+		null,0=0,working_time &gt;= #{startTime})
+		and
+		if(#{endTime} is
+		null,0=0,working_time &lt;= #{endTime})
+		and
+		if(#{state} is
+		null,0=0,state = #{state})
+		order by doctorId,working_time
+	</select>
+	<update id="doctorDelete" parameterType="Integer">
+		update
+		doctor
+		set
+		state = 1
+		where
+		doctorId = #{id}
+	</update>
+	<update id="updateDoctorMessage"
+		parameterType="com.hospital.bean.Doctor">
+		update
+		doctor
+		set
+		gender = #{gender},
+		doctor_department =
+		#{department},
+		name = #{name},
+		doctor_title = #{title}
+		where
+		doctorId =
+		#{id}
+	</update>
+	<select id="doctorById" parameterType="Integer"
+		resultType="com.hospital.bean.Doctor">
+		select
+		doctorId as "id",
+		gender as "gender",
+		doctor_department as "department",
+		name as "name",
+		doctor_title as
+		"title",
+		working_time as "workTime",
+		state as "state"
+		from
+		doctor
+		where
+		doctorId = #{id}
+	</select>
+</mapper>

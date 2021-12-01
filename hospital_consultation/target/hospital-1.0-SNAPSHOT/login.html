@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>医患问诊交互管理系统登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+    <link href="css/login2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>医患问诊交互系统<sup>2020</sup></h1>
+
+<div class="login" style="margin-top:50px;">
+
+    <div class="header">
+        <div class="switch" id="switch"><a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
+            <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a>
+            <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        </div>
+    </div>
+
+
+    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 270px;">
+
+        <!--登录-->
+        <div class="web_login" id="web_login">
+
+
+            <div class="login-box">
+                <div class="login_form">
+                    <form action="" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post"><input type="hidden" name="did" value="0"/>
+                        <input type="hidden" name="to" value="log"/>
+                        <div class="uinArea" id="uinArea">
+                            <label class="input-tips" for="u">帐号：</label>
+                            <div class="inputOuter" id="uArea">
+                                <input type="text" id="u" name="username" class="inputstyle" onblur="cleanNerror()"/><span style="color: red;font-weight: bold" id="uerror"></span>
+                            </div>
+                        </div>
+                        <div class="pwdArea" id="pwdArea">
+                            <label class="input-tips" for="p">密码：</label>
+                            <div class="inputOuter" id="pArea">
+                                <input type="password" id="p" name="p" class="inputstyle" onblur="cleanPerror()"/><span style="color: red;font-weight: bold" id="perror"></span>
+                            </div>
+                        </div>
+                        <div class="yzmArea" id="yzmArea">
+                            <label class="input-tips" for="Verification">验证码：</label>
+                            <div class="inputOuter" id="yzArea">
+                                <input style="width:110px;" type="text" id="Verification" onblur="cleanYerror()" name="Verification" class="inputstyle">
+                                <img src="image.do" id="yzmimage" align="middle" onclick="this.src=this.src+'?'" /><span style="color: red;font-weight: bold" id="yerror"></span>
+                            </div>
+                        </div>
+
+                        <div style="padding-left:50px;margin-top:80px;">
+                            <input type="button" value="登 录" id="login"  onclick="Login()" style="width:150px;" class="button_blue"/>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <!--登录end-->
+    </div>
+
+    <!--注册-->
+    <div class="qlogin" id="qlogin" style="display: none; ">
+
+        <div class="web_login">
+            <form name="form2" id="regUser" accept-charset="utf-8"  action="" method="post">
+            <input type="hidden" name="to" value="reg"/>
+            <input type="hidden" name="did" value="0"/>
+            <ul class="reg_form" id="reg-ul">
+                <div id="userCue" class="cue">请填写基本信息进行注册</div>
+                <li>
+                    <label for="cerificateNo"  class="input-tips2">身份证号：</label>
+                    <div class="inputOuter2">
+                        <input type="text" id="cerificateNo" name="cerificateNo"  maxlength="18" onblur="cleanCerror()" class="inputstyle2"/>
+                    </div>
+                </li>
+                <li>
+                    <label for="name"  class="input-tips2">姓名：</label>
+                    <div class="inputOuter2">
+                        <input type="text" id="name" name="name" maxlength="16" class="inputstyle2" onblur="cleanUerror()"/>
+                    </div>
+                </li>
+                <li>
+                    <label for="contacts" class="input-tips2">紧急联系：</label>
+                    <div class="inputOuter2">
+                        <input type="text" id="contacts" name="contacts" class="inputstyle2" onblur="cleanCoerror()" />
+                    </div>
+                </li>
+
+                <li>
+                    <label for="contactsPhone" class="input-tips2">手机号：</label>
+                    <div class="inputOuter2">
+                        <input type="text" id="contactsPhone" name="contactsPhone" maxlength="11" onblur="cleanCPerror()" class="inputstyle2"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="inputArea">
+                        <input type="button" id="reg"  style="margin-top:10px;margin-left:85px;" class="button_blue" value="同意协议并注册"/> <a href="#" class="zcxy" target="_blank">注册协议</a>
+                    </div>
+
+                </li><div class="cl"></div>
+            </ul>
+        </form>
+        </div>
+    </div>
+    <!--注册end-->
+</div>
+<div class="jianyi">*推荐使用ie8或以上版本ie浏览器或Chrome内核浏览器访问本站</div>
+</body></html>

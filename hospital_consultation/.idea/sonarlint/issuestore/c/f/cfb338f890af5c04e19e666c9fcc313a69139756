@@ -1,0 +1,12 @@
+
+n
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ
+H
+java:S3416""2Update this logger to use "DrugsController.class".(‡ı÷
+`
+java:S1192*"JDefine a constant instead of duplicating this literal "drugsName" 4 times.(„‚î¿
+
+java:S1130"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(¶‚Úüÿÿÿÿÿ
+c
+java:S1192("HDefine a constant instead of duplicating this literal "drugsId" 4 times.(©­ß—şÿÿÿÿ
+i	java:S100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çàÁâûÿÿÿÿ

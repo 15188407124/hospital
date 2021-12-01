@@ -1,0 +1,103 @@
+
+L
+java:S1128"6Remove this unused import 'javax.servlet.http.Cookie'.(«Şªü
+d
+java:S11920"IDefine a constant instead of duplicating this literal "workUnit" 4 times.(áˆó¯ùÿÿÿÿ
+U
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(­Ÿ±
+]
+java:S1192["GDefine a constant instead of duplicating this literal "123456" 3 times.(áßİ»
+?	java:S108‘")Either remove or fill this block of code.(å¥‡
+^
+java:S11922"IDefine a constant instead of duplicating this literal "genderNo" 4 times.(ûÅš
+u
+java:S2293È"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+P
+java:S4973à"9Use the "equals" method if value comparison was intended.(Ö ºÒ
+_
+java:S11925"IDefine a constant instead of duplicating this literal "contacts" 4 times.(êÛàÀ
+b
+java:S11929"GDefine a constant instead of duplicating this literal "wardNo" 5 times.(¬½™Æıÿÿÿÿ
+?	java:S108Î")Either remove or fill this block of code.(å¥‡
+O
+java:S4973O"9Use the "equals" method if value comparison was intended.(Ö ºÒ
+\
+java:S1854Æ"@Remove this useless assignment to local variable "md5_password".(ÏŞâóÿÿÿÿÿ
+h
+java:S1192."MDefine a constant instead of duplicating this literal "departmentNo" 5 times.(ÚÛšÁùÿÿÿÿ
+l	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏŞâóÿÿÿÿÿ
+>	java:S108g")Either remove or fill this block of code.(å¥‡
+O	java:S106™"9Replace this use of System.out or System.err by a logger.(ØÜ£š
+d	java:S100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å±È¯
+f
+java:S1192¯"JDefine a constant instead of duplicating this literal "patientId" 5 times.(ÁÊ§ƒüÿÿÿÿ
+g	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ãÍô
+\
+java:S1854‰"@Remove this useless assignment to local variable "md5_password".(ÏŞâóÿÿÿÿÿ
+l	java:S117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏŞâóÿÿÿÿÿ
+8
+java:S1116¡"Remove this empty statement.(Å¾¨Ëıÿÿÿÿ
+g
+java:S1192„"KDefine a constant instead of duplicating this literal "leaveTime" 10 times.(¯®€»üÿÿÿÿ
+l	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¯üîÿÿÿÿÿ
+^
+java:S2259¥"BA "NullPointerException" could be thrown; "json" is nullable here.(òêÖøşÿÿÿÿ
+_
+java:S11927"IDefine a constant instead of duplicating this literal "statusNo" 3 times.(è¨’
+ˆ
+java:S1130ù"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(•ğÊ
+\
+java:S1192:"FDefine a constant instead of duplicating this literal "bedNo" 7 times.(ÃÁ’ø
+i
+java:S11926"NDefine a constant instead of duplicating this literal "contactsPhone" 4 times.(ïŒ¦®øÿÿÿÿ
+O	java:S106š"9Replace this use of System.out or System.err by a logger.(³´Êı
+f	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹²õm
+k	java:S117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏŞâóÿÿÿÿÿ
+h	java:S100o"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ñ½—ÿÿÿÿÿ
+<
+java:S2129‰" Remove this "String" constructor(ÏŞâóÿÿÿÿÿ
+ˆ
+java:S1130Ñ"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(Å±È¯
+;
+java:S2129_" Remove this "String" constructor(ÏŞâóÿÿÿÿÿ
+i
+java:S1192/"NDefine a constant instead of duplicating this literal "cerificateNo" 11 times.(˜™ ùÿÿÿÿ
+g	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ¥Øö
+F
+java:S3740Õ"/Provide the parametrized type for this generic.(ŸÌ•ß
+K
+java:S1128"5Remove this unused import 'org.slf4j.IMarkerFactory'.(½¨÷ã
+ˆ
+java:S1130Í"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(¡Ùì¶
+d
+java:S1192-"IDefine a constant instead of duplicating this literal "nationNo" 3 times.(À¸èüÿÿÿÿ
+c
+java:S11921"HDefine a constant instead of duplicating this literal "marryNo" 4 times.(î«÷Ãÿÿÿÿÿ
+]
+java:S1192;"GDefine a constant instead of duplicating this literal "birth" 26 times.(«­Á½
+`
+java:S11924"JDefine a constant instead of duplicating this literal "homePhone" 4 times.(Î’Î 
+]
+java:S11928"GDefine a constant instead of duplicating this literal "typeNo" 3 times.(§‡ƒŠ
+l	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üˆİïùÿÿÿÿ
+[
+java:S1854_"@Remove this useless assignment to local variable "md5_password".(ÏŞâóÿÿÿÿÿ
+<
+java:S2129Æ" Remove this "String" constructor(ÏŞâóÿÿÿÿÿ
+P
+java:S4973¶"9Use the "equals" method if value comparison was intended.(Ö ºÒ
+
+java:S1130–"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(š¹üÄúÿÿÿÿ
+Z
+java:S1155¡">Use isEmpty() to check whether the collection is empty or not.(Å¾¨Ëıÿÿÿÿ
+k
+java:S1192¡"ODefine a constant instead of duplicating this literal "admissionTime" 16 times.(»ÿªÈøÿÿÿÿ
+J
+java:S3416%"4Update this logger to use "PatientController.class".(‡ı÷
+l	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ¥€Áúÿÿÿÿ
+T	java:S106Á"9Replace this use of System.out or System.err by a logger.(àÚøİıÿÿÿÿ
+d
+java:S1192,"IDefine a constant instead of duplicating this literal "doctorNo" 3 times.(È†ğşÿÿÿÿ
+b
+java:S11923"LDefine a constant instead of duplicating this literal "homeAddress" 4 times.(ìòË
+W	java:S125"<This block of commented-out lines of code should be removed.(³±Û¸ıÿÿÿÿ

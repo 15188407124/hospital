@@ -1,0 +1,15 @@
+
+r
+java:S14883"\Immediately return this expression instead of assigning it to the temporary variable "list".(ÇòÃ±
+r
+java:S14889"\Immediately return this expression instead of assigning it to the temporary variable "maps".(Âğ÷°
+w
+java:S1488E"\Immediately return this expression instead of assigning it to the temporary variable "maps".(Ï¹Šÿÿÿÿÿ
+x
+java:S1488—"\Immediately return this expression instead of assigning it to the temporary variable "list".(¼Ò‡Ìıÿÿÿÿ
+r
+java:S1488-"\Immediately return this expression instead of assigning it to the temporary variable "list".(‹ù›Ó
+q
+java:S1488?"\Immediately return this expression instead of assigning it to the temporary variable "maps".(§Ù
+m
+java:S3776m"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¹ìÇºûÿÿÿÿ
